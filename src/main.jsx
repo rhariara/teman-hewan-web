@@ -172,7 +172,7 @@ function App(){
         <div className="scene-label"><span className="tiny-dot"/>{stageLabel}</div>
         <div className="character-stage">
           <div className="decor leaf l1">✦</div><div className="decor leaf l2">✿</div><div className="decor leaf l3">✦</div>
-          <div className="animal-wrap"><AnimalArt animal={current} happy={happy}/></div>
+          <div className="animal-wrap">   {current.id === 'sapi' ? (     <img       src="/animals/sapi.png"       alt="Sapi"       className="animal-art"     />   ) : (     <AnimalArt animal={current} happy={happy} />   )} </div>
           <div className="ground-shadow"/>
           <div className="name-pill">{(stage==='intro'||stage==='celebrate'||stage==='tapAnswer')?current.name:'Siapa namanya?'}</div>
         </div>
